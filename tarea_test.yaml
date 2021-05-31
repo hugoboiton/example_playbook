@@ -1,8 +1,9 @@
 ---
+
 - hosts: all
   become: true
   tasks:
    - name:  instala vim
-     apt:  name= vim sate= presnt
+     apt:  name=vim sate=presnt
    - name:  saluda
      shell:  echo hola
