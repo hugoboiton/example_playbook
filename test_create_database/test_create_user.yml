@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  #vars_files:
+    #-vars.yml
+  vars:
+    mysql_user: devops
+    mysql_user_password: 1234
+  
+  tasks:
+    - name: create database user
+      mysql_user:
+        name: "{{ mysql_user }}"
+        password: "{{ mysql_user_password }}"
+        priv: '*.*:ALL'
+        state: present    

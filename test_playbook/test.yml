@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: insatall vim
+      apt: name=vim 
+    - name: saluda
+      shell: echo hola mundo

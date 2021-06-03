@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes 
+  tasks:
+    - name: test ping
+      ping:
+    - name: messeger 
+      shell: echo hello word
+    - name: install vim in nodo server
+      apt: name=vim state=present
+      
